@@ -1,7 +1,9 @@
 function App() {
   return (
-      <div className="w-screen h-screen bg-gray-800">
-         <h3>Test</h3>
+      <div className="flex w-screen h-screen bg-gray-800">
+         <div className="m-auto w-80 rounded overflow-hidden bg-white h-52 shadow">
+            <h2 className="p-2 bg-indigo-500 text-white uppercase font-bold">Room</h2>
+         </div>
       </div>
   );
 }
