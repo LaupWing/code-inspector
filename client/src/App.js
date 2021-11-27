@@ -1,5 +1,9 @@
+import {useState} from 'react'
+
 function App() {
-  return (
+   const [state, setstate] = useState(false)
+   
+   return (
       <div className="flex w-screen h-screen bg-gray-800">
          <div className="m-auto w-80 flex flex-col rounded overflow-hidden bg-white h-36 shadow">
             <h2 className="p-2 bg-indigo-500 text-white uppercase tracking-wider">Room</h2>
@@ -9,7 +13,7 @@ function App() {
             </div>
          </div>
       </div>
-  );
+   );
 }
 
 export default App;
