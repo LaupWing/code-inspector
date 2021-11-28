@@ -1,7 +1,11 @@
 import {useState} from 'react'
 
-const JoinRoom = ({setJoinRoom}) => {
+const JoinRoom = ({setJoinRoom, socket}) => {
    const [value, setValue] = useState('') 
+   const joinRoom = ()=>{
+      console.log(socket)
+      // socket.emit('join room', value)
+   }
 
    return (
       <div className="m-auto w-full p-2 flex flex-col">
@@ -21,6 +25,7 @@ const JoinRoom = ({setJoinRoom}) => {
             </button>
             <button 
                className="bg-indigo-500 rounded-full w-28 capitalize py-0.5 text-white"
+               onClick={joinRoom}
             >
                join
             </button>

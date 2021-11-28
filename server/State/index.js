@@ -1,6 +1,7 @@
 module.exports = class {
    constructor(){
       this.sockets = []
+      this.rooms   = []
    }
    addSocket(socket){
       this.sockets.push(socket.id)
@@ -10,6 +11,10 @@ module.exports = class {
       socket.on('disconnect', ()=>{
          this.sockets = this.sockets.filter(x=>x!== socket.id)
       })
-
+      socket.on('join room', (room_name)=>{
+         if(this.rooms.find(x=>x===room_name)){
+            socket.emit('room not found')
+         }
+      })
    }
 }
