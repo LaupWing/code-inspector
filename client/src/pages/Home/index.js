@@ -1,4 +1,6 @@
 import {useState} from 'react'
+import CreateRoom from './CreateRoom'
+import JoinRoom from './JoinRoom'
 
 const Home = () => {
    const [joinRoom, setJoinRoom] = useState(false)
@@ -21,6 +23,8 @@ const Home = () => {
                Create Room
             </button>
          </div>}
+         {createRoom && <CreateRoom/>}
+         {joinRoom && <JoinRoom/>}
       </div>
    )
 }
