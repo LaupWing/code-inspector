@@ -3,7 +3,10 @@ import Home from './pages/Home'
 import Editor from './pages/Editor'
 
 function App() {
-   
+   fetch('http://localhost:5000')
+      .then(test=>{
+         console.log(test)
+      })
    return (
       <div className="flex w-screen h-screen bg-gray-800">
          <Routes>

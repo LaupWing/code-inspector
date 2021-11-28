@@ -1,6 +1,6 @@
 module.exports = class Room {
    static get(req, res){
-      console.log('test')
+      console.log(req.params.id)
       res.send({
          roomId: true
       })
