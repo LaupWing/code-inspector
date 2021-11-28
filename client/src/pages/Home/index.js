@@ -24,7 +24,9 @@ const Home = () => {
             </button>
          </div>}
          {createRoom && 
-            <CreateRoom/>
+            <CreateRoom
+            setCreateRoom={setCreateRoom}
+            />
          }
          {joinRoom && 
             <JoinRoom
