@@ -2,11 +2,9 @@ import {useState} from 'react'
 import CreateRoom from './CreateRoom'
 import JoinRoom from './JoinRoom'
 
-const Home = ({route}) => {
+const Home = ({socket}) => {
    const [joinRoom, setJoinRoom] = useState(false)
    const [createRoom, setCreateRoom] = useState(false)
-   const socket = 'test'
-   console.log(route)
    return (
       <div className="m-auto w-80 flex flex-col rounded overflow-hidden bg-white h-40 shadow">
          <h2 className="p-2 bg-indigo-500 text-white uppercase tracking-wider">

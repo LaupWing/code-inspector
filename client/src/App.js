@@ -10,14 +10,12 @@ import {io} from 'socket.io-client'
    
 const socket = io('http://localhost:5000', { transports : ['websocket'] })
 function App() {
-   console.log(socket)
    return (
       <div className="flex w-screen h-screen bg-gray-800">
          <Routes>
             <Route 
-               socket={socket}
                path="/" 
-               element={<Home/>}
+               element={<Home socket={socket}/>}
             />
             <Route path="/editor" element={<Editor/>}/>
          </Routes>
