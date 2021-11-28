@@ -1,6 +1,6 @@
 import React from 'react'
 
-const JoinRoom = () => {
+const JoinRoom = ({setJoinRoom}) => {
    return (
       <div className="m-auto w-full p-2 flex flex-col">
          <input 
@@ -11,6 +11,7 @@ const JoinRoom = () => {
          <div className="flex m-auto mt-3">
             <button 
                className="border-indigo-500 border-2 text-indigo-500 rounded-full mr-2 w-28 capitalize py-0.5"
+               onClick={()=>setJoinRoom(false)}
             >
                cancel
             </button>

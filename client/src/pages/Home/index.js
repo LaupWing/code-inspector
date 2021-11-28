@@ -7,7 +7,7 @@ const Home = () => {
    const [createRoom, setCreateRoom] = useState(false)
 
    return (
-      <div className="m-auto w-80 flex flex-col rounded overflow-hidden bg-white h-36 shadow">
+      <div className="m-auto w-80 flex flex-col rounded overflow-hidden bg-white h-40 shadow">
          <h2 className="p-2 bg-indigo-500 text-white uppercase tracking-wider">Room</h2>
          {(!joinRoom && !createRoom) && <div className="m-auto">
             <button 
@@ -23,8 +23,14 @@ const Home = () => {
                Create Room
             </button>
          </div>}
-         {createRoom && <CreateRoom/>}
-         {joinRoom && <JoinRoom/>}
+         {createRoom && 
+            <CreateRoom/>
+         }
+         {joinRoom && 
+            <JoinRoom
+               setJoinRoom={setJoinRoom}
+            />
+         }
       </div>
    )
 }
