@@ -1,11 +1,15 @@
-import React from 'react'
+import {useState} from 'react'
 
 const JoinRoom = ({setJoinRoom}) => {
+   const [value, setValue] = useState('') 
+
    return (
       <div className="m-auto w-full p-2 flex flex-col">
          <input 
             type="text" 
-            className="bg-gray-300 w-full p-2 py-1 rounded" 
+            value={value}
+            onChange={e=> setValue(e.target.value)}
+            className="bg-gray-300 w-full p-2 py-1 rounded focus:outline-none" 
             placeholder="Join a room!"
          />
          <div className="flex m-auto mt-3">
