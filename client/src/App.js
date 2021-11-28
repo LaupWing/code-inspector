@@ -8,7 +8,6 @@ io('http://localhost:5000', { transports : ['websocket'] })
 // socket.on("connect", () => {
 //    console.log(socket.id); // x8WIv7-mJelg7on_ALbx
 //  });
-
  
 function App() {
    return (

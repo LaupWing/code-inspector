@@ -12,9 +12,10 @@ const state      = new State()
 const io = new Server(httpServer)
 
 io.on('connection', socket=>{
-   state.addUser(socket.id)
-   console.log(socket.id)
-   console.log(state.users)
+   state.addSocket(socket)
+   console.log(state.sockets)
+   // console.log(socket.id)
+   // console.log(state.users)
 })
 
 app
