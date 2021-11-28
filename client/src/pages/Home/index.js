@@ -6,9 +6,21 @@ const Home = () => {
    const [joinRoom, setJoinRoom] = useState(false)
    const [createRoom, setCreateRoom] = useState(false)
 
+   const heading = ()=>{
+      if(joinRoom){
+         return 'Join Room'
+      }else if(createRoom){
+         return 'Create Room'
+      }else{
+
+      }
+   }
+
    return (
       <div className="m-auto w-80 flex flex-col rounded overflow-hidden bg-white h-40 shadow">
-         <h2 className="p-2 bg-indigo-500 text-white uppercase tracking-wider">Room</h2>
+         <h2 className="p-2 bg-indigo-500 text-white uppercase tracking-wider">
+            {joinRoom ? 'Join Room' : createRoom ? 'Create Room' : 'Choose'}
+         </h2>
          {(!joinRoom && !createRoom) && <div className="m-auto">
             <button 
                className="bg-indigo-500 rounded-full mr-2 w-28 capitalize py-0.5 text-white"
@@ -25,7 +37,7 @@ const Home = () => {
          </div>}
          {createRoom && 
             <CreateRoom
-            setCreateRoom={setCreateRoom}
+               setCreateRoom={setCreateRoom}
             />
          }
          {joinRoom && 

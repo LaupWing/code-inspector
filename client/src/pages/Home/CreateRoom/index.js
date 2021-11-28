@@ -10,7 +10,7 @@ const CreateRoom = ({setCreateRoom}) => {
             value={value}
             onChange={e=> setValue(e.target.value)}
             className="bg-gray-300 w-full p-2 py-1 rounded focus:outline-none" 
-            placeholder="Join a room!"
+            placeholder="Create a room!"
          />
          <div className="flex m-auto mt-3">
             <button 
@@ -22,7 +22,7 @@ const CreateRoom = ({setCreateRoom}) => {
             <button 
                className="bg-indigo-500 rounded-full w-28 capitalize py-0.5 text-white"
             >
-               join
+               create
             </button>
          </div>
       </div>
