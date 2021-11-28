@@ -1,5 +1,8 @@
 module.exports = class Room {
-   static get_room(){
+   static get(req, res){
+      
+   }
+   static post(req, res){
       
    }
 }
