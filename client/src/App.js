@@ -4,8 +4,9 @@ import Editor from './pages/Editor'
 
 function App() {
    fetch('http://localhost:5000')
-      .then(test=>{
-         console.log(test)
+      .then(async test=>{
+         const json = await test.json()
+         console.log(json)
       })
    return (
       <div className="flex w-screen h-screen bg-gray-800">
