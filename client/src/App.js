@@ -10,6 +10,9 @@ import {io} from 'socket.io-client'
    
 const socket = io('http://localhost:5000', { transports : ['websocket'] })
 function App() {
+   socket.on('hello', ()=>{
+      console.log('hello')
+   })
    return (
       <div className="flex w-screen h-screen bg-gray-800">
          <Routes>

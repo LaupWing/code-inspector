@@ -8,6 +8,7 @@ module.exports = class {
       this.setWatchers(socket)
    }
    setWatchers(socket){
+      socket.emit('hello')
       socket.on('disconnect', ()=>{
          this.sockets = this.sockets.filter(x=>x!== socket.id)
       })

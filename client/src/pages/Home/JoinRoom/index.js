@@ -3,7 +3,7 @@ import {useState} from 'react'
 const JoinRoom = ({setJoinRoom, socket}) => {
    const [value, setValue] = useState('') 
    const [error, setError] = useState('') 
-
+   console.log('building')
    socket.on('room not found', ()=>{
       console.log('not found')
       console.log('heh')
@@ -11,7 +11,6 @@ const JoinRoom = ({setJoinRoom, socket}) => {
    const joinRoom = ()=>{
       socket.emit('join room', value)
    }
-
    return (
       <div className="m-auto w-full p-2 flex flex-col">
          <input 
