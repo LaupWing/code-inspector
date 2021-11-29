@@ -7,6 +7,8 @@ const CreateRoom = ({setCreateRoom}) => {
    const createRoom = () =>{
       if(!value){
          setError('You have to fill in something!')
+      }else{
+         
       }
    }
 

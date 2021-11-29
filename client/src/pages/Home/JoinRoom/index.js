@@ -1,6 +1,6 @@
 import {useState} from 'react'
 
-const JoinRoom = ({setJoinRoom, socket}) => {
+const JoinRoom = ({setJoinRoom}) => {
    const [value, setValue] = useState('') 
    const [error, setError] = useState('') 
 
