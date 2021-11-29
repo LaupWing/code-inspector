@@ -6,10 +6,11 @@ module.exports = class Room {
          res.send({
             room: false
          })
+      }else{
+         res.send({
+            room: true
+         })
       }
-      res.send({
-         room: true
-      })
    }
    static post(req, res){
       

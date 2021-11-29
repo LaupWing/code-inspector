@@ -9,8 +9,11 @@ const JoinRoom = ({setJoinRoom, socket}) => {
       console.log('heh')
    })
    const joinRoom = async ()=>{
-      const fetch_room = await fetch('http://localhost:5000/room/test')
-      console.log(fetch_room)
+      const res = await fetch('http://localhost:5000/room/test')
+      const json = await res.json()
+      if(!json.room){
+         setError('Room not found')
+      }
    }
    return (
       <div className="m-auto w-full p-2 flex flex-col">
