@@ -13,12 +13,10 @@ const io = new Server(httpServer)
 
 io.on('connection', socket=>{
    state.addSocket(socket)
-   console.log(state.sockets)
-   // console.log(socket.id)
-   // console.log(state.users)
 })
 
 app
+   .set('state', state)
    .use(cors())
    .use(router)
 

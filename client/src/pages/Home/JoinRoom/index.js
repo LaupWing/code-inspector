@@ -8,8 +8,9 @@ const JoinRoom = ({setJoinRoom, socket}) => {
       console.log('not found')
       console.log('heh')
    })
-   const joinRoom = ()=>{
-      socket.emit('join room', value)
+   const joinRoom = async ()=>{
+      const fetch_room = await fetch('http://localhost:5000/room/test')
+      console.log(fetch_room)
    }
    return (
       <div className="m-auto w-full p-2 flex flex-col">
