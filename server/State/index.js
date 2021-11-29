@@ -11,8 +11,12 @@ module.exports = class {
       socket.on('disconnect', ()=>{
          this.sockets = this.sockets.filter(x=>x!== socket.id)
       })
-      socket.on('create room', (room_name)=>{
-         socket.join(room_name)
+      socket.on('join room', (room_name)=>{
+         if(!this.rooms.find(x=>x===room_name)){
+            console.log('send')
+            socket.emit('room not found')
+         }
+         // console.log(room_name)
       })
    }
 }
