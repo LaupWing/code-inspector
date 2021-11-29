@@ -3,11 +3,7 @@ import {useState} from 'react'
 const JoinRoom = ({setJoinRoom, socket}) => {
    const [value, setValue] = useState('') 
    const [error, setError] = useState('') 
-   console.log('building')
-   socket.on('room not found', ()=>{
-      console.log('not found')
-      console.log('heh')
-   })
+   
    const joinRoom = async ()=>{
       const res = await fetch('http://localhost:5000/room/test')
       const json = await res.json()
